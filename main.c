@@ -2,20 +2,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void main() {
-	int a;
-	double f1;
-	float f2;
-	char ch;
+
+int main() {
+	int a, b;
 	
-	a = 15;
-	f1 = 123.456;
-	f2 = 123.456;
-	ch = 'A';
-	printf ("%d\n", a);
-	printf ("%lf\n", f1);
-	printf ("%f\n", f2);
-	printf ("%c\n", ch);
+	a = 23;
+	b = 24;
+	printf ("%d\n", a>b);
+	printf ("%d\n", a<b);
+	
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf ("%d\n", 10 > 5 && 8 < 3);
+	printf ("%d\n", 10 > 5 || 8 < 3);
+	printf ("%d\n", !(10>8));
 	return 0;
 }
 */
@@ -24,10 +30,27 @@ void main() {
 #include <stdlib.h>
 int main ()
 {
-	int num;
-	printf ("숫자를 하나 입력해주세요. : ");
-	scanf ("%d", &num);
-	printf ("%d\n", num);
+	int res;
+	
+	res = 0 && 0;
+	printf ("%d\n", res);
+	res = 0 && 1;
+	printf ("%d\n", res);
+	res = 1 && 0;
+	printf ("%d\n", res);
+	res = 1 && 1;
+	printf ("%d\n", res);
+	
+	res = 0 || 0;
+	printf ("%d\n", res);
+	res = 0 || 1;
+	printf ("%d\n", res);
+	res = 1 || 0;
+	printf ("%d\n", res);
+	res = 1 || 1;
+	printf ("%d\n", res);
+	scanf ("%d", &res);
+	printf ("%d", res%2 == 0);
 	return 0;
 }
 */
@@ -36,74 +59,34 @@ int main ()
 #include <stdlib.h>
 int main()
 {
-	float eye_r;
-	float eye_l;
-	printf ("양쪽 시력을 입력해주세요. : ");
-	scanf ("%f, %f", &eye_r, &eye_l);
-	printf ("오른쪽 시력 : %f\n왼쪽 시력 : %f\n", eye_r, eye_l);
+	int a;
+	scanf ("%d", &a);
+	printf ("%d\n", a/7 == 5);
+	printf ("%d\n", a%3 == 0);
+	printf ("%d\n", !(a%5 == 0));
+	printf ("%d\n", a%3 == 0 && a%2 == 0);
+	printf ("%d\n", a%4 == 0 || a%7 == 0);
 	return 0;
 }
 */
 /*
 #include <stdio.h>
 #include <stdlib.h>
-int main()
-{
+int main ()
+{	
 	int a;
 	int b;
 	int c;
-	int d;
-	int e;
-	double f;
-	double g;
-	char h;
-	printf ("학년, 반, 번호: ");
-	scanf ("%d, %d, %d", &a, &b, &c);
-	printf ("%d학년 %d반 %d번\n", a, b, c);
-	printf ("아파트 동,호수: ");
-	scanf ("%d, %d", &d, &e);
-	printf ("%d동 %d호\n", d, e);
-	printf ("키, 몸무게, 혈액형: ");
-	scanf ("%lf, %lf, %c", &f, &g, &h);
-	printf ("%.1lfcm, %.1lfkg, %c형", f, g, h);
-	return 0;
-}
-*/
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int main()
-{
-	int m;
-	int cm;
-	int g;
-	printf ("m : ");
-	scanf ("%d", &m);
-	cm = m * 100;
-	printf ("cm : %d, mm : %d", cm, m*1000);
-}
-*/
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int main()
-{
-	int a;
-	int b;
-	double c;
-	float d;
-	printf ("나이를 입력하세요 : ");
+	printf ("\"천재는 1%%의 영감과 99%%의 노력으로 이루어진다.\"\n\t-토머스 에디슨\n");
+	printf ("정수 1 : ");
 	scanf ("%d", &a);
-	printf ("당신의 나이는 %d살입니다.\n", a);
-	printf ("학년을 입력하세요 : ");
+	printf ("정수 2 : ");
 	scanf ("%d", &b);
-	printf ("당신의 학년은 %d학년 입니다.\n", b);
-	printf ("키를 입력하세요 : ");
-	scanf ("%lf", &c);
-	printf ("당신의 키는 %.1lfcm 입니다.\n", c);
-	printf ("마라톤의 코스의 길이 : ");
-	scanf ("%f", &d);
-	printf ("마라톤 코스의 길이는 %.3f km 입니다.", d);
+	printf ("\n%d+%d = %d\n%d-%d = %d\n%d*%d = %d\n%d/%d = %d\n", a, b, a+b, a, b, a-b, a, b, a*b, a, b, a/b);
+	printf ("세자리 정수를 입력하세요.\n");
+	scanf ("%d", &c);
+	printf ("%d+%d+%d = %d\n", c/100, (c/10)-(c/100)*10, c%10, c/100+((c/10)-(c/100)*10)+c%10);
+	printf ("%d*%d*%d = %d", c/100, (c/10)-(c/100)*10, c%10, (c/100)*((c/10)-(c/100)*10)*(c%10));
 	return 0;
 }
 */
@@ -111,16 +94,8 @@ int main()
 #include <stdlib.h>
 int main()
 {
-	int a;
-	int b;
-	double c;
-	double d;
-	printf ("자연수를 입력하세요 : ");
-	scanf ("%d", &a);
-	scanf ("%d", &b);
-	printf ("%d, %d\n", a, b);
-	printf ("실수를 입력하세요 :  ");
-	scanf ("%lf %lf", &c, &d);
-	printf ("%lf, %lf\n", c, d);
-	return 0;		
+	printf ("%d\n", 5000*2 > 1000*15);
+	printf ("%d\n", 1000/1 + 100 == 1000/3);
+	printf ("%d\n", 5000 >= 500*5 + 1000*2);
+	printf ("%d", 10000 > 2000*4 || 5000>2000*3);
 }
