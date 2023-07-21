@@ -5,70 +5,11 @@
 
 
 int main() {
-	if (0)
-	{
-		printf ("True \t 참\n");
-		printf ("응\t맞아\n");
-	}
-	else 
-	{
-		printf ("False\t거짓\n");
-		printf ("아니\t아니야\n");
-	}
-	return 0;
-}
-*/
-/*
-#include <stdio.h>
-#include <Stdlib.h>
-
-int main()
-{
-	int a, b, c;
+	int i;
 	
-	a = 12;
-	b = 56;
-	c = a > b;
-	
-	if (c)
+	for (i=1; i<=10; i++)
 	{
-		printf ("%d는 %d보다 크다\n", a, b);
-	}
-	else
-	{
-		printf ("%d는 %d보다 크지 않다\n", a, b);
-	}
-	return 0;
-}
-*/
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main()
-{
-	srand (time(NULL));
-	
-	int rnd = 1100;
-	
-	printf ("%d\n", rnd);
-	
-	if (rnd > 500)
-	{
-		printf ("조건식1 실행\n");
-	}
-	else if (rnd > 750)
-	{
-		printf ("조건식2 실행\n");
-	}
-	else if (rnd > 900)
-	{
-		printf ("조건식3 실행\n");
-	}
-	else if (rnd > 1000)
-	{
-		printf ("조건식4 실행\n");
+		printf ("%d 씨큐브코딩\n", i);
 	}
 	return 0;
 }
@@ -79,26 +20,73 @@ int main()
 
 int main()
 {
-	int num;
+	int n;
 	
-	printf ("10000 미만 정수 입력 : ");
-	scanf ("%d", &num);
+	for (n=-10; n <= -1; n++)
+	{
+		printf ("n = %d\n", n);
+	}
+	printf ("마지막 n = %d\n", n);
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int n;
 	
-	if (num < 10)
+	for (n=30; n > 20; n--)
 	{
-		printf ("한 자리 수\n");
+		printf ("n = %d\n", n);
 	}
-	else if (num < 100)
+	printf ("마지막 n = %d\n", n);
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int i;
+	
+	for (i = 0; i < 10; i++)
 	{
-		printf ("두 자리 수\n");
+		printf ("i = %d\n", i);
 	}
-	else if (num < 1000)
+	printf ("마지막 i = %d\n", i);
+}
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	for (int i = 0; i < 10; i++)
 	{
-		printf ("세 자리 수\n");
+		printf ("i = %d\n", i);
 	}
-	else if(num < 10000)
-	{
-		printf ("네 자리 수\n");
+	printf ("마지막 i = %d\n", i);
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int i;
+	int a = -1;
+	for (i = 0; i < 10; i++)
+	{	
+		a = a*-1;
+		printf ("%d ", a);	
 	}
 }
 */
@@ -108,218 +96,65 @@ int main()
 
 int main()
 {
+	int i;
+	int a = 1;
+	for (i = 0; i < 10; i++)
+	{
+		printf ("%d ", a%2);
+		a = a+1;
+	}
+}
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int i;
+	int a = 1;
+	int b = 1;
+	for (i = 0; i < 10; i++)
+	{
+		printf ("%d ", a*b);
+		a = a*-1;
+		b = b+1;
+	}
+}
+*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int i;
 	int a;
-	double b;
-	
-	printf ("정수를 입력하세요 : ");
+	int b = 0;
 	scanf ("%d", &a);
-	if (a > 0)
+	for (i = 1; i <= a; i++)
 	{
-		printf ("%d : 양수\n", a);
+		b = b+i;
 	}
-	else if (a == 0)
-	{
-		printf ("%d : 0\n", a);		
-	}
-	else
-	{
-		printf ("%d : 음수\n", a);
-	}
-	if (a%2 == 0)
-	{
-		printf ("%d : 짝수\n", a);
-	}
-	else
-	{
-		printf ("%d : 홀수\n", a);
-	}
-	if (a == 0)
-	{
-		printf ("%d : 3의 배수가 아니다\n\n", a);
-	}
-	else if (a%3 == 0)
-	{
-		printf ("%d : 3의 배수\n\n", a);
-	}
-	else
-	{
-		printf ("%d : 3의 배수가 아니다\n\n", a);	
-	}
-	
-	printf ("실수를 입력하세요 : ", b);
-	scanf ("%lf", &b);
-	if (a > 0)
-	{
-		printf ("절대값 : %lf", b);
-	}
-	else
-	{
-		printf ("절대값: %lf", -1.0 * b);
-	}
+	printf ("%d", b);
 	return 0;
 }
 */
-/*
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-	int a, b;
-	
-	
-	printf ("정수 두 개를 입력하세요 : ");
-	scanf ("%d, %d", &a, &b);
-	if (a > b)
-	{
-		if (a%b == 0)
-		{
-			printf ("나누어 떨어진다\n");
-		}
-		else
-		{
-			printf ("나누어 떨어지지 않는다\n");
-		}
-	}
-	else
-	{
-		if (b%a == 0)
-		{
-			printf ("나누어 떨어진다\n");
-		}
-		else
-		{
-			printf ("나누어 떨어지지 않는다\n");
-		}
-	}
-}
-*/
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-	double a, b, c, d, e;
-	
-	printf ("실수 세 개를 입력하세요 : ");
-	scanf ("%lf, %lf, %lf, %lf, %lf", &a, &b, &c, &d, &e);
-	if (a > b && a > c && a > d && a > e)
-	{
-		printf ("%lf가 가장 크다", a);
-	}
-	else if (b > a && b > c && b > d && b > e)
-	{
-		printf ("%lf가 가장 크다", b);
-	}
-	else if (c > a && c > b && c > d && c > e)
-	{
-		printf ("%lf가 가장 크다", c);
-	}
-	else if (d > a && d > b && d > c && d > e)
-	{
-		printf ("%lf가 가장 크다", d);
-	}
-	else if (e > a && e > b && e > c && e > d)
-	{
-		printf ("%lf가 가장 크다", e);	
-	}
-	return 0;
-}
-*/
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int main ()
-{
+	int i;
 	int a;
-	printf ("자동차 좌석 수를 입력하세요 : ");
+	int b;
+	
 	scanf ("%d", &a);
-	if (a == 2 || a == 5 || a == 7 || a == 9 || a == 12)
+	
+	for (i = 2; i <= 9; i++)
 	{
-		if (a == 2)
-		{
-			printf ("스포츠카");
-	    }
-	    else if (a == 5)
-	    {
-	    	printf ("승용차");
-		}
-		else if (a == 7)
-		{
-			printf ("SUV");
-		}
-		else if (a == 9)
-		{
-			printf ("승합차");
-		}
-		else if (a == 12)
-		{
-			printf ("미니버스");
-		}
-	}
-	else
-	{
-		printf ("입력 오류");
-	}
-	return 0;
-}
-*/
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-	int a, b;
-	printf ("정수 2개를 입력하세요 : ");
-	scanf ("%d, %d", &a, &b);
-	if (a%2 == 0 && a%3 == 0)
-	{
-		printf ("공배수가 맞다\n");
-	}
-	else 
-	{
-		printf ("공배수가 아니다\n");
-	}
-	if (12%a == 0 && 30%a == 0)
-	{
-		printf ("공약수가 맞다");
-	}
-	else 
-	{
-		printf ("공약수가 아니다");
-	}
-	return 0;
-}
-*/
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-	int a, b;
-	printf ("정수 2개를 입력하세요 : ");
-	scanf ("%d, %d", &a, &b);
-	if (a%2 == 0 && b%2 == 0)
-	{
-		printf ("두 수의 곱 = %d", a*b);
-	}
-	else if (a%2 != 0 && b%2 != 0)
-	{
-		printf ("두 수의 합 = %d", a+b);
-	}
-	else 	
-	{
-		if (a > b)
-		{
-			printf ("두 수의 차 = %d", a-b);
-		}
-		else
-		{
-			printf ("두 수의 차 = %d", b-a);
-		}
+		b = a*i;
+		printf ("%d X %d = %d\n", a, i, b);
 	}
 	return 0;
 }
